@@ -10,7 +10,7 @@ import {
 const Counter = (props) => {
   // console.log("Props in counter", props.count);
   const [incrementNumber, setIncrementNumber] = useState(null)
-  
+
   return (
     <div>
       <h1>Count : {props.count.count}</h1>
@@ -22,7 +22,7 @@ const Counter = (props) => {
         value={incrementNumber}
         onChange={(e) => setIncrementNumber(e.target.value)}
       />
-      <button onClick={() => props.handleIncreaseGivenValue(incrementNumber)} style={{margin: "0 12px"}}>Add {incrementNumber} Amount</button>
+      <button onClick={() => props.handleIncreaseGivenValue(incrementNumber)} style={{margin: "0 12px"}}>Add {incrementNumber} Value</button>
     </div>
   );
 };
