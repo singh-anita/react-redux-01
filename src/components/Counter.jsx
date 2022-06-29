@@ -1,12 +1,13 @@
 import { connect } from "react-redux";
-import { INCREMENT, DECREMENT } from "../redux/actionsConstants/actionConstants";
+import { INCREMENT, DECREMENT, INCREASEBY5 } from "../redux/actionsConstants/actionConstants";
 
 const Counter = (props) =>{
   // console.log("Props in counter", props.count);
   return(
   <div>
-      <button onClick={props.handleIncrementValue}> + </button>
       <h2>Count : {props.count.count}</h2>
+      <button onClick={props.handleIncrementValue}> + </button>
+      <button onClick={props.handleIncreaseValue}>Increase By 5</button>
       <button onClick={props.handleDecrementValue}> - </button>
   </div>
   )
@@ -31,6 +32,9 @@ const mapDispatchToProps = (dispatch) =>{
     handleDecrementValue: () => {
       return dispatch({ type: DECREMENT });
     },
+    handleIncreaseValue: () => {
+      return dispatch({ type: INCREASEBY5 })
+    }
   }
 }
 
