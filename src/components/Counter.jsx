@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { INCREMENT, DECREMENT } from "../redux/actionsConstants/actionConstants";
 
 const Counter = (props) =>{
-  console.log("Props in counter", props.count);
+  // console.log("Props in counter", props.count);
   return(
   <div>
       <button onClick={props.handleIncrementValue}> + </button>
