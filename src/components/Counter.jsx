@@ -6,7 +6,7 @@ const Counter = (props) =>{
   return(
   <div>
       <button onClick={props.handleIncrementValue}> + </button>
-      <span>Count : {props.count.count}</span>
+      <h2>Count : {props.count.count}</h2>
       <button onClick={props.handleDecrementValue}> - </button>
   </div>
   )
