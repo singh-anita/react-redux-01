@@ -32,7 +32,6 @@ const Container = styled.div`
 `;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-console.log(theme)
 root.render(
   <React.StrictMode>
     <Provider store={store}>
