@@ -4,24 +4,23 @@ import { CHANGE_THEME } from "../redux/actionsConstants/actionConstants";
 const Theme = (props) => {
   // console.log('props', props)
   return (
-    <div style={{ background: props.theme && `#333`, color: props.theme && `#fff`, marginBottom: '30px'}}>
-      <p>Theme</p>
+    <div>
+      <p>{props.theme}</p>
+      <h1>My Dark Theme</h1>
       <button onClick={props.handleThemeChange}>Toggle theme</button>
     </div>
   );
 }
 
 const mapStateToProps = (state) =>{
-  console.log(state)
-  return {
-    theme: state.theme.isDarkThemeEnabled
-  }
+  // console.log('state',state)
+  return { theme: state.theme.isDarkThemeEnabled }
 }
 
 const mapDispatchToProps = (dispatch) =>{
   return {
     handleThemeChange: () => {
-      dispatch( {type: CHANGE_THEME})
+      return dispatch( {type: CHANGE_THEME})
     }
   }
 }

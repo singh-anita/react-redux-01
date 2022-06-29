@@ -1,4 +1,4 @@
-import react,{ useState} from "react"
+import { useState} from "react"
 import { connect } from "react-redux";
 import {
   INCREMENT,
@@ -6,14 +6,16 @@ import {
   INCREASE_BY_5,
   INCREASE_BY_VALUE,
 } from "../redux/actionsConstants/actionConstants";
-// const [incrementAmount, setIncrementAmount] = useState('2')
+
 const Counter = (props) => {
   // console.log("Props in counter", props.count);
   const [incrementNumber, setIncrementNumber] = useState(null)
+  
   return (
     <div>
       <h1>Count : {props.count.count}</h1>
       <button onClick={props.handleIncrementValue} style={{margin: "0 12px"}}> + </button>
+      <button onClick={props.handleDecrementValue} style={{margin: "0 12px"}}> - </button>
       <button onClick={props.handleIncreaseValue} style={{margin: "0 12px"}}>Increase By 5</button>
       <input
         aria-label="Set increment amount"
@@ -21,7 +23,6 @@ const Counter = (props) => {
         onChange={(e) => setIncrementNumber(e.target.value)}
       />
       <button onClick={() => props.handleIncreaseGivenValue(incrementNumber)} style={{margin: "0 12px"}}>Add {incrementNumber} Amount</button>
-      <button onClick={props.handleDecrementValue} style={{margin: "0 12px"}}> - </button>
     </div>
   );
 };
@@ -38,7 +39,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => {
-  console.log(dispatch)
   return {
     handleIncrementValue: () => {
       return dispatch({ type: INCREMENT });

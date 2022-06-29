@@ -1,13 +1,15 @@
 import { CHANGE_THEME } from "../actionsConstants/actionConstants";
 
-const initialState = { isDarkThemeEnabled : false }
+const initialState = { theme : false }
 
 const themeReducer = (state = initialState, action) => {
+   // console.log(state)
    const { type } = action;
 
    switch(type){
     case CHANGE_THEME: 
-    return {...state, isDarkThemeEnabled: !state.isDarkThemeEnabled};
+    return !state
+   //  return {...state, isDarkThemeEnabled: !state.isDarkThemeEnabled};
 
     default: 
     return state
