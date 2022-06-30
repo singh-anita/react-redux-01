@@ -9,7 +9,7 @@ import {
 
 const Counter = (props) => {
   // console.log("Props in counter", props.count);
-  const [incrementNumber, setIncrementNumber] = useState(null)
+  const [incrementNumber, setIncrementNumber] = useState('')
 
   return (
     <div>
