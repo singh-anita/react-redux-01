@@ -5,7 +5,7 @@ import Counter from "./components/Counter";
 import './App.css';
 
 function App(props) {
-  console.log("------app props", props);
+  // console.log("------app props", props);
   return (
     <div className={props.theme.isDarkThemeEnabled === true ? `dark-theme App` : `App`}>
       <header className="App-header">
